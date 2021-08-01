@@ -22,3 +22,8 @@ tareaAgregada.addEventListener('submit', e => {
     ponerTareaEnLaLista(nuevaTarea);
 });
 
+lista.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')) {
+        e.target.parentElement.remove();
+    }
+});
