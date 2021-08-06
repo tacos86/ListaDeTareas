@@ -13,7 +13,8 @@ tareaAgregada.addEventListener('submit', e => {
     const nuevaTarea = tareaAgregada.agregarTarea.value.trim();
     ponerTareaEnLaLista(nuevaTarea);
     //resetea el input
-    tareaAgregada.reset();        
+    tareaAgregada.reset();       
+    localStorage.setItem("tareapendiente" , (JSON.stringify(tareaAgregada))); 
 });
 //borra la tarea al darle click al tachito
 lista.addEventListener('click', e => {
@@ -32,7 +33,15 @@ const ponerTareaEnLaLista = tarea => {
     </li>
     `;
     lista.innerHTML += texto;
+    
 };
+
+function mostrarTareas () {
+    localStorage.getItem("tareaPendiente", (JSON.parse(tareaAgregada)));
+}
+
+document.addEventListener("load", mostrarTareas);
+ 
 
 
 
