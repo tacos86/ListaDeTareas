@@ -74,11 +74,16 @@ mostrarTareas()
 
 //PETICION AJAX
 
-//const tareasPendientesJSON = "./tareaspendientes.json"
+const tareasPendientesJSON = "./tareaspendientes.json"
 
-//$.getJSON(tareasPendientesJSON, function (resultado, estado) {
-//    if(estado === "success"){
-//   console.log(respuesta)}))
+$.getJSON(tareasPendientesJSON, function (resultado, estado) {
+if(estado === "success"){
+console.log(resultado)
+
+}
+})
+
+
         
             
         
