@@ -73,28 +73,28 @@ botonGuardar.addEventListener("click", guardar)
 mostrarTareas()
 
 //PETICION AJAX
+
 const tareasPendientesJSON = "./tareaspendientes.json"
 
 $.getJSON(tareasPendientesJSON, function (resultado, estado) {
    if(estado === "success"){
-  console.log(resultado)
+  //console.log(resultado)
   resultado.forEach(e => {
     $(".listaTareas").append(
-        `<tr>
-        <th class = "col-2">${e.tarea}</th>
-        <td class = "col-2"><button class="text-danger borrar"(${e.id})>Borrar</button></td>
-        </tr>`
+      `<table>
+      <tr class="tareasJSON">
+       <td>${e.tarea}</td>
+       <td><button class="btnBorrar text-danger">Borrar</button></td>
+       </tr>
+       </table>`
     )
   });
   
 }});
 
-$(".listaTareas").ready(function() {
-    $(".borrar").click(function() {
-        $("th").remove();
-        $(".borrar").hide();
+$(".tareasJSON").ready(function() {
+    $(".btnBorrar").click(function() {
+        $("td").remove();
+        $(".btnBorrar").hide();
     });
 });
-        
-            
-        
