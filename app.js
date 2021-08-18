@@ -83,6 +83,8 @@ resultado.forEach(e => {
     $(".listaTareas").append(
         `<tr>
         <th class = "col-2">${e.tarea}</th>
+        <td class = "col-2"><button class="text-danger">Borrar</button></td>
+        
 
         </tr>`
         
