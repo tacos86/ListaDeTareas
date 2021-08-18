@@ -81,7 +81,10 @@ if(estado === "success"){
 console.log(resultado)
 resultado.forEach(e => {
     $(".listaTareas").append(
-        `<div>${e.tarea}</div>`
+        `<tr>
+        <th class = "col-2">${e.tarea}</th>
+
+        </tr>`
         
     )
 }
