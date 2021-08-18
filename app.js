@@ -79,6 +79,13 @@ const tareasPendientesJSON = "./tareaspendientes.json"
 $.getJSON(tareasPendientesJSON, function (resultado, estado) {
 if(estado === "success"){
 console.log(resultado)
+resultado.forEach(e => {
+    $(".listaTareas").append(
+        `<div>${e.tarea}</div>`
+        
+    )
+}
+    )
 
 }
 })
