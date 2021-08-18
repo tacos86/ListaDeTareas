@@ -1,12 +1,12 @@
 [
     {
-        "tarea":"Pasear al gato", "id": "Date.now"
+        "tarea":"Pasear al gato", "id": "1"
     
     },
     {
-        "tarea":"Alimentar al perro", "id": "Date.now"
+        "tarea":"Alimentar al perro", "id": "2"
     },
     {
-        "tarea":"Pedir pizza", "id": "Date.now"
+        "tarea":"Pedir pizza", "id": "3"
     }    
 ]

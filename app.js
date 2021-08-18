@@ -3,7 +3,7 @@
 class nuevaTarea {
     constructor(tarea, id) {
         this.tarea = tarea;
-        this.id = Date.now();
+        this.id = date.now();
     }
 }
 //VARIABLES
@@ -73,29 +73,28 @@ botonGuardar.addEventListener("click", guardar)
 mostrarTareas()
 
 //PETICION AJAX
-
 const tareasPendientesJSON = "./tareaspendientes.json"
 
 $.getJSON(tareasPendientesJSON, function (resultado, estado) {
-if(estado === "success"){
-console.log(resultado)
-resultado.forEach(e => {
+   if(estado === "success"){
+  console.log(resultado)
+  resultado.forEach(e => {
     $(".listaTareas").append(
         `<tr>
         <th class = "col-2">${e.tarea}</th>
-        <td class = "col-2"><button class="text-danger" .click="borrarDatos"(${e.id})>Borrar</button></td>
-        
-
+        <td class = "col-2"><button class="text-danger borrar"(${e.id})>Borrar</button></td>
         </tr>`
-        
     )
-}
-    )
+  });
+  
+}});
 
-}
-})
-
-
+$(".listaTareas").ready(function() {
+    $(".borrar").click(function() {
+        $("th").remove();
+        $(".borrar").hide();
+    });
+});
         
             
         
