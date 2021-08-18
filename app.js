@@ -55,7 +55,7 @@ function mostrarTareas() {
             table.appendChild(tabla)
         });
     } else {
-        alert("No tenes tareas pendientes");
+        alert("No ingresaste ninguna tarea");
     }
 }
 
